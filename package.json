@@ -1,0 +1,36 @@
+{
+  "name": "2fa-authenticator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/main/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jpgomes06/2fa-authenticator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Jpgomes06/2fa-authenticator/issues"
+  },
+  "homepage": "https://github.com/Jpgomes06/2fa-authenticator#readme",
+  "dependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.8.0",
+    "amqplib": "^0.10.9",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "http-status-codes": "^2.3.0",
+    "mongoose": "^9.1.5",
+    "pino": "^10.1.0",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.10.8",
+    "tsx": "^4.20.6"
+  }
+}
