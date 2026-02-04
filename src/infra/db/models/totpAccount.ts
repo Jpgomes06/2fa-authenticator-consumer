@@ -24,15 +24,7 @@ export const TotpAccountSchema = new mongoose.Schema({
     createdAt: {
         type: String,
         required: true,
-    },
-    otpAuthUri: {
-        type: String,
-        required: false,
-    },
-    qrCodeBase64: {
-        type: String,
-        required: false,
-    },
+    }
 });
 
 export const AccountModel = mongoose.model("Accounts", TotpAccountSchema);
