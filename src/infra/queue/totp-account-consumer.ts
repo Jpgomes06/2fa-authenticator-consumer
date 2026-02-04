@@ -32,8 +32,6 @@ export class TotpConsumer {
 
             if (success) {
                 this.channel?.ack(message);
-            } else {
-                this.channel?.nack(message, false, true);
             }
         } catch (error) {
             this.channel?.nack(message, false, false);
