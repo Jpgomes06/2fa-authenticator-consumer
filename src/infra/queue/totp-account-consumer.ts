@@ -1,6 +1,8 @@
 import {ChannelModel, Channel, connect, ConsumeMessage} from 'amqplib';
 import { TotpAccount } from '../../domain/entities/account';
 import { TotpAccountService } from '../../domain/service/totp-account-service';
+import pino from 'pino';
+const logger = pino();
 
 export class TotpConsumer {
     private connection?: ChannelModel;
@@ -20,7 +22,7 @@ export class TotpConsumer {
                 }
             });
         } catch (error) {
-            console.error('Consumer error:', error);
+            logger.error({ err: error }, '[Consumer] error');
         }
     }
 

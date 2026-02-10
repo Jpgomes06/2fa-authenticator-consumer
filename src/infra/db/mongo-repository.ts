@@ -1,5 +1,7 @@
 import { TotpAccount } from '../../domain/entities/account';
 import { AccountModel } from './models/totpAccount';
+import pino from 'pino';
+const logger = pino();
 
 export class TotpAccountMongoRepository   {
     async store(totpAccount: TotpAccount): Promise<boolean> {
@@ -7,7 +9,7 @@ export class TotpAccountMongoRepository   {
             await AccountModel.create(totpAccount);
             return true;
         } catch (error) {
-            console.log(error);
+            logger.error(error);
             return false;
         }
     }

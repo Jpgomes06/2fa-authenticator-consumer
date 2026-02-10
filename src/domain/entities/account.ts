@@ -5,6 +5,4 @@ export type TotpAccount = {
     accountID:string,
     secret:string,
     createdAt:string
-    otpAuthUri?:string,
-    qrCodeBase64?:string,
 };
